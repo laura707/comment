@@ -1,0 +1,15 @@
+<h1>게시글 작성</h1>
+
+<%=params%>
+
+<form action="/home/create" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <!--form태그를 post방식으로 보낼때, CSRF 보안 위협 방지를 위한 코드-->
+    
+<!--<form action="/home/index" method="get"><!--/home/index로 이 폼을 보낼게, new 액션에 get방식으로 넘어간단 뜻-->-->
+    <input type="text" placeholder="제목을 써주세요" name="post_title"/> <!--value="제목"으로 적으면 폼 디폴트값으로 뜨기 때문에 안 적어도 됨-->
+    <input type="textarea" placeholder="내용을 써주세요" name="post_content"/> <!--name에 적은 값으로 내용이 넘어감-->
+    <input type="submit" value="제출" />
+</form>
+
+ 

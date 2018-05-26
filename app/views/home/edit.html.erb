@@ -1,0 +1,14 @@
+<h1>게시물 수정</h1>
+
+<%=params%>
+
+<form action="/home/update/<%=params[:editPost_id]%>" method="get"> <!--이 폼은 게시물 번호를 가지고 update로 보냄-->
+<!--action="/home/update/%=@upDatePost.id%>"와 같음-->
+
+<!--<form action="/home/index" method="get"><!--/home/index로 이 폼을 보낼게, new 액션에 get방식으로 넘어간단 뜻-->-->
+    <input type="text" value="<%=@upDatePost.Title%>" name="post_title2"/><br />
+    <!--value="제목"으로 적으면 폼 디폴트값으로 뜨기 때문에 안 적어도 됨-->
+    <input type="textarea" value="<%=@upDatePost.Content%>" name="post_content2"/> <!--name에 적은 값으로 내용이 넘어감-->
+    <!--textarea태그로 써도 됨-->
+    <input type="submit" value="제출" />
+</form>
